@@ -1,0 +1,27 @@
+.detail-container {
+
+    padding: 24px;
+  
+    max-width: 900px;
+  
+    margin: auto;
+  }
+  
+  .comment-section {
+  
+    margin-top: 24px;
+  
+    padding: 20px;
+  }
+  
+  .full-width {
+  
+    width: 100%;
+  
+    margin-bottom: 16px;
+  }
+  
+  .comment-card {
+  
+    margin-top: 16px;
+  }

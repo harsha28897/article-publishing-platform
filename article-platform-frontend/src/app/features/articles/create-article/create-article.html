@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+
+<div class="article-form-container">
+
+  <mat-card>
+
+    <mat-card-title>
+      Create Article
+    </mat-card-title>
+
+    <form
+      [formGroup]="articleForm"
+      (ngSubmit)="onSubmit()">
+
+      <mat-form-field
+        appearance="outline"
+        class="full-width">
+
+        <mat-label>
+          Title
+        </mat-label>
+
+        <input
+          matInput
+          formControlName="title">
+
+      </mat-form-field>
+
+      <mat-form-field
+        appearance="outline"
+        class="full-width">
+
+        <mat-label>
+          Content
+        </mat-label>
+
+        <textarea
+          matInput
+          rows="10"
+          formControlName="content">
+        </textarea>
+
+      </mat-form-field>
+
+      <button
+        mat-raised-button
+        color="primary">
+
+        Publish
+
+      </button>
+
+    </form>
+
+  </mat-card>
+
+</div>

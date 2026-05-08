@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+
+<div class="article-container">
+
+    <div *ngIf="articles.length === 0">
+
+        <p>
+          No articles found.
+        </p>
+      
+    </div>
+
+    <div *ngIf="loading">
+
+        <p>
+          Loading articles...
+        </p>
+      
+    </div>
+
+    <mat-card
+    *ngFor="let article of articles"
+    class="article-card"
+    [routerLink]="['/articles', article.id]">
+  
+    <mat-card-title>
+      {{ article.title }}
+    </mat-card-title>
+  
+    <mat-card-content>
+  
+      <p>
+        Author:
+        {{ article.authorUsername }}
+      </p>
+  
+    </mat-card-content>
+  
+  </mat-card>
+
+</div>

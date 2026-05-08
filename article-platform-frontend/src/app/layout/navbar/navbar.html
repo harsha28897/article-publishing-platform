@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+
+    <span>
+      Article Platform
+    </span>
+  
+    <span class="spacer"></span>
+  
+    <button
+      mat-button
+      routerLink="/articles">
+  
+      Articles
+  
+    </button>
+  
+    <button
+      mat-button
+      routerLink="/articles/create">
+  
+      Create Article
+  
+    </button>
+  
+    <button
+      mat-button
+      (click)="logout()">
+  
+      Logout
+  
+    </button>
+  
+  </mat-toolbar>

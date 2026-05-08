@@ -1,0 +1,101 @@
+<app-navbar></app-navbar>
+
+<div
+  class="detail-container"
+  *ngIf="article">
+
+  <mat-card>
+
+    <mat-card-title>
+      {{ article.title }}
+    </mat-card-title>
+
+    <mat-card-content>
+
+      <p>
+        {{ article.content }}
+      </p>
+
+      <p>
+        <strong>
+          Author:
+        </strong>
+
+        {{ article.authorUsername }}
+      </p>
+
+    <button
+            mat-raised-button
+            color="accent"
+            (click)="likeArticle()">
+
+            Like ({{ likeCount }})
+
+    </button>
+
+    </mat-card-content>
+
+  </mat-card>
+
+  <mat-card class="comment-section">
+
+    <mat-card-title>
+      Comments
+    </mat-card-title>
+
+    <form
+      [formGroup]="commentForm"
+      (ngSubmit)="submitComment()">
+
+      <mat-form-field
+        appearance="outline"
+        class="full-width">
+
+        <mat-label>
+          Add Comment
+        </mat-label>
+
+        <textarea
+          matInput
+          rows="4"
+          formControlName="content">
+        </textarea>
+
+      </mat-form-field>
+
+      <button
+        mat-raised-button
+        color="primary">
+
+        Submit Comment
+
+      </button>
+
+    </form>
+
+    <div
+      *ngFor="let comment of comments"
+      class="comment-card">
+
+      <mat-card>
+
+        <mat-card-content>
+
+          <p>
+            {{ comment.content }}
+          </p>
+
+          <small>
+            By:
+            {{ comment.authorUsername }}
+          </small>
+
+        </mat-card-content>
+
+      </mat-card>
+
+    </div>
+
+  </mat-card>
+
+</div>

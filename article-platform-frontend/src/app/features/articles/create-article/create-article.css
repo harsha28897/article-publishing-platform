@@ -1,0 +1,22 @@
+.article-form-container {
+
+    padding: 24px;
+  
+    display: flex;
+  
+    justify-content: center;
+  }
+  
+  mat-card {
+  
+    width: 700px;
+  
+    padding: 24px;
+  }
+  
+  .full-width {
+  
+    width: 100%;
+  
+    margin-bottom: 20px;
+  }
